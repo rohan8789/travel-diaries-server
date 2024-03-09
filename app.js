@@ -33,7 +33,7 @@ mongoose
     }?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() => {
-    app.listen(5000, () => {
+    app.listen(process.env.PORT||5000, () => {
       console.log("server is up and running...");
     });
   })
